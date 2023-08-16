@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "cypress": "^12.17.3"
+  },
+  "scripts": {
+    "start": "npx cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ],
+    "nonGlobalStepDefinitions": true
+  }
+}
