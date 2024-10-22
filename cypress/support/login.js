@@ -56,41 +56,5 @@ export const loginToAAD = (username, password) => {
   cy.get(initButtonSpanSelector).should('be.visible');
   cy.get(initButtonSelector).should('be.visible');
   cy.get(initButtonSelector).click();
-  // cy.wait(3000);
-  // cy.get('input[type="email"]').type('mauricio.ceballos@fligoo.com');
-  // cy.get('input[type="submit"]').click();
-
-  // cy.get('input[type="password"]').type('Mau$Ce2021');
-  // cy.get('input[type="submit"]').click();
-  // cy.get('#idBtn_Back').click();
-
-  // cy.session(
-  //   `aad-${username}`,
-  //   () => {
-  //     const log = Cypress.log({
-  //       displayName: 'Azure Active Directory Login',
-  //       message: [`🔐 Authenticating | ${username}`],
-  //       // @ts-ignore
-  //       autoEnd: false,
-  //     })
-
-  //     // log.snapshot('before')
-
-      loginViaAAD(username, password)
-
-  //     // log.snapshot('after')
-  //     // log.end()
-  //   },
-  //   {
-  //     validate: () => {
-  //       // this is a very basic form of session validation for this demo.
-  //       // depending on your needs, something more verbose might be needed
-  //       cy.visit(Cypress.env('alterUrl'))
-  //       cy.get('#welcome-div').should(
-  //         'contain',
-  //         `Welcome ${Cypress.env('aad_username')}!`
-  //       )
-  //     },
-  //   }
-  // )
+  loginViaAAD(username, password)
 }
